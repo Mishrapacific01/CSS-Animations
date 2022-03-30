@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gif</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content=""> 
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
+    <style>
+        *,
+        ::after,
+        ::before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        --cube: 300px;
+        --circle: 80px;
+        --animation: 10s;
+        --color-red: #fe3511;
+        --color-yellow: #fefe46;
+        --color-blue: #28befe;
+        --color-green: #237e1d;
+        }
+        body {
+        overflow-x: hidden;
+        font-family: "sans-serif";
+        }
+        /*------------------*/
+        /*------------------*/
+        .wrapper {
+        width: 100%;
+        min-width: 320px;
+        height: 100vh;
+        min-height: 600px;
+        }
+        .gif {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        .gif__wrap {
+        padding: 20px;
+        }
+        .gif__cube {
+        position: relative;
+        width: var(--cube);
+        height: var(--cube);
+        }
+        .gif__circle {
+        position: absolute;
+        width: var(--circle);
+        height: var(--circle);
+        border-radius: 50px;
+        transition: var(--animation);
+        }
+        /*---------------------*/
+        /*---------------------*/
+        .gif__circle--red {
+        top: 0;
+        left: 0;
+        background: var(--color-red);
+        z-index: 4;
+        }
+        .start .gif__circle--red {
+        animation: circleRed var(--animation) infinite ease-in-out;
+        animation-direction: normal;
+        }
+        @keyframes circleRed {
+        0% {
+            width: var(--circle);
+        }
+        12.5% {
+            width: 100%;
+            background: var(--color-yellow);
+        }
+        25% {
+            width: var(--circle);
+            background: var(--color-yellow);
+        }
+        37.5% {
+            width: 100%;
+            background: var(--color-blue);
+        }
+        50% {
+            width: var(--circle);
+            background: var(--color-blue);
+        }
+        62.5% {
+            width: 100%;
+            background: var(--color-green);
+        }
+        75% {
+            width: var(--circle);
+            background: var(--color-green);
+        }
+        87.5% {
+            width: 100%;
+            background: var(--color-red);
+        }
+        100% {
+            width: var(--circle);
+            background: var(--color-red);
+        }
+        }
+        /*---------------------*/
+        /*---------------------*/
+        .gif__circle--blue {
+        bottom: 0;
+        right: 0;
+        background: var(--color-blue);
+        z-index: 2;
+        }
+        .start .gif__circle--blue {
+        animation: circleBlue var(--animation) infinite ease-in-out;
+        animation-direction: normal;
+        }
+        @keyframes circleBlue {
+        0% {
+            width: var(--circle);
+        }
+        12.5% {
+            width: 100%;
+            background: var(--color-green);
+        }
+        25% {
+            width: var(--circle);
+            background: var(--color-green);
+        }
+        37.5% {
+            width: 100%;
+            background: var(--color-red);
+        }
+        50% {
+            width: var(--circle);
+            background: var(--color-red);
+        }
+        62.5% {
+            width: 100%;
+            background: var(--color-yellow);
+        }
+        75% {
+            width: var(--circle);
+            background: var(--color-yellow);
+        }
+        87.5% {
+            width: 100%;
+            background: var(--color-blue);
+        }
+        100% {
+            width: var(--circle);
+            background: var(--color-blue);
+        }
+        }
+        /*---------------------*/
+        /*---------------------*/
+        .gif__circle--yellow {
+        top: 0;
+        right: 0;
+        background: var(--color-yellow);
+        z-index: 3;
+        }
+        .start .gif__circle--yellow {
+        animation: circleYellow var(--animation) infinite ease-in-out;
+        animation-direction: normal;
+        }
+        @keyframes circleYellow {
+        0% {
+            height: var(--circle);
+        }
+        12.5% {
+            height: 100%;
+            background: var(--color-blue);
+        }
+        25% {
+            height: var(--circle);
+            background: var(--color-blue);
+        }
+        37.5% {
+            height: 100%;
+            background: var(--color-green);
+        }
+        50% {
+            height: var(--circle);
+            background: var(--color-green);
+        }
+        62.5% {
+            height: 100%;
+            background: var(--color-red);
+        }
+        75% {
+            height: var(--circle);
+            background: var(--color-red);
+        }
+        87.5% {
+            height: 100%;
+            background: var(--color-yellow);
+        }
+        100% {
+            height: var(--circle);
+            background: var(--color-yellow);
+        }
+        }
+        /*---------------------*/
+        /*---------------------*/
+        .gif__circle--green {
+        bottom: 0;
+        left: 0;
+        background: var(--color-green);
+        z-index: 1;
+        }
+        .start .gif__circle--green {
+        animation: circleGreen var(--animation) infinite ease-in-out;
+        animation-direction: normal;
+        }
+        @keyframes circleGreen {
+        0% {
+            height: var(--circle);
+        }
+        12.5% {
+            height: 100%;
+            background: var(--color-red);
+        }
+        25% {
+            height: var(--circle);
+            background: var(--color-red);
+        }
+        37.5% {
+            height: 100%;
+            background: var(--color-yellow);
+        }
+        50% {
+            height: var(--circle);
+            background: var(--color-yellow);
+        }
+        62.5% {
+            height: 100%;
+            background: var(--color-blue);
+        }
+        75% {
+            height: var(--circle);
+            background: var(--color-blue);
+        }
+        87.5% {
+            height: 100%;
+            background: var(--color-green);
+        }
+        100% {
+            height: var(--circle);
+            background: var(--color-green);
+        }
+        }
+        /*---------------------*/
+        /*---------------------*/
+        .gif__control {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+        padding: 0 15px;
+        }
+        .gif__button {
+        padding: 10px 25px;
+        background: #007f74;
+        color: #fff;
+        font-family: "sans-serif";
+        font-size: 16px;
+        cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="gif">
+            <div class="gif__wrap">
+                <div class="gif__cube">
+                    <div class="gif__circle gif__circle--red"></div>
+                    <div class="gif__circle gif__circle--yellow"></div>
+                    <div class="gif__circle gif__circle--green"></div>
+                    <div class="gif__circle gif__circle--blue"></div>
+                </div>
+
+                <div class="gif__control">
+                    <button class="gif__button" data-action="start">Start</button>
+                    <button class="gif__button" data-action="stop">Stop</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const btn = document.querySelectorAll('.gif__button')
+        if (btn) {
+            btn.forEach(e => {
+                e.onclick = () =>{
+                    let action = e.dataset.action
+                    if (action == 'start'){
+                        document.body.classList.add('start')
+                    } else {
+                        document.body.classList.remove('start')
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
